@@ -32,37 +32,37 @@ public class Simulator implements ActionListener, Runnable {
 	long startTime = 0;
 	
 	public Simulator() throws Exception{		 
-       frame.setSize(1920, 500);
-       frame.setLayout(new BorderLayout());
-       frame.add(road, BorderLayout.CENTER);
+        frame.setSize(1920, 500);
+        frame.setLayout(new BorderLayout());
+        frame.add(road, BorderLayout.CENTER);
   
-       bottom.setLayout(new GridLayout(1,4));
-       bottom.add(start);
-       start.addActionListener(this);
-       bottom.add(stop);
-       stop.addActionListener(this);
-       bottom.add(carcount);
-       bottom.add(limitList);
-       limitList.setSelectedIndex(4);
-       limitList.addActionListener(this);
-       frame.add(bottom, BorderLayout.SOUTH);
+        bottom.setLayout(new GridLayout(1,4));
+        bottom.add(start);
+        start.addActionListener(this);
+        bottom.add(stop);
+        stop.addActionListener(this);
+        bottom.add(carcount);
+        bottom.add(limitList);
+        limitList.setSelectedIndex(4);
+        limitList.addActionListener(this);
+        frame.add(bottom, BorderLayout.SOUTH);
      
-       left.setLayout(new GridLayout(4,1));
-       left.add(semi);
-       semi.addActionListener(this);
-       left.add(suv);
-       suv.addActionListener(this);
-       left.add(sedan);
-       sedan.addActionListener(this);
-       left.add(blockage);
-       blockage.addActionListener(this);
-       frame.add(left, BorderLayout.WEST);
-      
-       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-       frame.setVisible(true);
+        left.setLayout(new GridLayout(4,1));
+        left.add(semi);
+        semi.addActionListener(this);
+        left.add(suv);
+        suv.addActionListener(this);
+        left.add(sedan);
+        sedan.addActionListener(this);
+        left.add(blockage);
+        blockage.addActionListener(this);
+        frame.add(left, BorderLayout.WEST);
+       
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
        
 
-       frame.repaint();
+        frame.repaint();
 	}
     public static void main(String args[]) throws Exception {
     	 new Simulator();
